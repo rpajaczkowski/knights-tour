@@ -13,6 +13,8 @@ import java.util.*;
 import java.io.*;
 
 public class Board extends JPanel implements MouseListener {
+
+	private static final long serialVersionUID = 7250409679801570891L;
 	
 	private static final Color DARK_COLOR = Color.GRAY;
 	private static final Color LIGHT_COLOR = Color.LIGHT_GRAY;
@@ -178,7 +180,7 @@ public class Board extends JPanel implements MouseListener {
 			getSquare(lastPos).knight = false;
 			getSquare(lastPos).repaint();
 		}
-		Square s = getSquare(pos);
+		//Square s = getSquare(pos);
 		listOfVisited.add(pos);
 		getSquare(pos).step = ++stepCounter;
 		getSquare(pos).knight = true;
